@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercicio</title>
+</head>
+<body>
+    <h1>Somando</h1>
+    <h2>Insira dois valores para soma</h2>
+    <input type='text' id='soma1'> + <input type='text' id='soma2'>
+    <input type='button' value='soma' id='btn-soma' onclick='somar()'><br><br>
+    <div id='resultado-soma'>Resultado: 0</div>
+
+    <script>
+        function somar(){ //funão que soma
+            var tn1 = document.getElementById('soma1')
+            var tn2 = document.getElementById('soma2')
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+            var res = document.getElementById('resultado-soma')
+            res.innerHTML = `Resultado da soma = ${n1 + n2}`            
+        }
+    </script>
+</body>
+</html>

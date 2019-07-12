@@ -1,0 +1,25 @@
+<!-- Faça 2 campos no HTML chamados: 'Nome', 'Sobrenome' e um botão 'Saudação'; ao clicar no botão exibir um alert: 'Olá {NOME} {SOBRENOME}'-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercicio 7</title>
+</head>
+<body>
+    Nome: <input type = "text" id = "txtnome"> Sobrenome: <input type = "text" id = "txtsobre"><br><br>
+    <input type = "button" value = "Saudação" onclick = "saudar()">
+
+    <script>
+        function saudar(){
+            var tnome = document.getElementById('txtnome')
+            var nome = tnome.value
+            var tsobre = document.getElementById('txtsobre')
+            var sobrenome = tsobre.value
+            alert(`Olá ${nome.toUpperCase()} ${sobrenome.toUpperCase()} `)
+        }
+    </script>
+</body>
+</html>

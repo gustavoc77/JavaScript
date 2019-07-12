@@ -1,0 +1,23 @@
+<!--exiba a quantidade de letras que possuem o texto inserido ao clicar no botão-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercicio 5</title>
+</head>
+<body>
+    <h2>Quantidade de letras</h2>
+    <input type="text" id="txtnome"> <input type="button" value="calcula" onclick="conta()">
+    <div id="res">Quantidade de letras: </div>
+    <script>
+        function conta(){
+            var tnome = document.getElementById('txtnome')
+            var nome = tnome.value
+            var resultado = document.getElementById('res')
+            resultado.innerHTML += nome.length
+        }
+    </script>
+</body>
+</html>

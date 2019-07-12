@@ -1,0 +1,46 @@
+<!--exiba a imagem de uma lampada, ao clicar em cima da lampada troque o src dela para a lampada que está acessa.-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercicio 6</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+        body{
+            background-color: black;
+            color: white
+        }
+        img#displayed{
+            display:block;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Interação com lâmpada</h1>
+    <div id = "event">
+        <img id = "displayed" src = "lampada-off.jpg">
+
+    </div>
+    <script>
+        var lampada = document.getElementById('displayed')
+        lampada.addEventListener('mouseenter',entrou)
+        lampada.addEventListener('mouseout',apagou)
+        
+        function entrou(){
+            var img = document.getElementById('displayed')
+            img.src = "lampada-on.jpg"
+        }
+        function apagou(){
+            var img = document.getElementById('displayed')
+            img.src = "lampada-off.jpg"
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>teste</title>
+</head>
+<body>
+    <h1>Hora</h1>
+    <script>
+        var ohora = new Date()
+        var hora = ohora.getHours()
+        document.write(`Horário Atual: ${hora}`)
+        document.write('<br>')
+        if(hora>=0 && hora<6){
+            document.write(`Ótima madrugada!`)
+        }
+        else if(hora >=6 && hora<12){
+            document.write('Bom Dia!')
+        }
+        else if(hora >=12 && hora<18){
+            document.write(`Boa Tarde!`)
+        }
+        else{
+            document.write(`Boa noite!`)
+        }
+    </script>
+</body>
+</html>

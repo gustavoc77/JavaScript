@@ -1,0 +1,26 @@
+<!--1 - Campo/Input do tipo text para preencher o nome completo.
+2 - Botão com o texto: 'Exibir Nome' e ao clicar neste botão é exibido um alert com o valor do campo nome completo-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercicio 4</title>
+</head>
+<body>
+    <h1>Nome</h1>
+    <input type="text" id="txtnome"> <input type="button" value="Exibir Nome" onclick="verifica()">
+    <div id = "res">O nome completo é:</div>
+    <script>
+        function verifica(){
+            var tnome = document.getElementById('txtnome')
+            var nome = tnome.value
+            var res = document.getElementById('res')
+            res.innerHTML += nome
+
+        }
+
+    </script>
+</body>
+</html>

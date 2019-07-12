@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pratica</title>
+    <style>
+        body{
+            font:normal 18pt Arial;
+        }
+        table,tr,td,th{
+            border:1px solid;
+        }
+        td,th{
+            padding: 7px;
+        }
+        input{
+            padding:10px;
+            margin: 20px;
+            width:100px;
+            background-color: black;
+            color: greenyellow;
+        }
+    
+    </style>
+</head>
+<body>
+    <h1>Tabelas</h1>
+   <table>
+       <caption>Tabela 1</caption>
+       <colgroup>
+            <col class = "Nome">
+            <col class = "Idade">
+            <col class = "Sexo">
+            <col class = "Profissao">
+            <col class = "Salario">
+       </colgroup>
+       <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Idade</th>
+            <th>Sexo</th>
+            <th>Profissao</th>
+            <th>Salário</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class = "teste">
+            <td>Gustavo</td>
+            <td>18</td>
+            <td>Masculino</td>
+            <td rowspan="2">Programador</td>
+            <td rowspan="2"><input type="button" value="VALOR" id = "programador"></td>
+        </tr>
+        <tr class = "teste">
+                <td>Haron</td>
+                <td>19</td>
+                <td>Masculino</td>
+                            
+        </tr>
+        <tr>
+                <td>Caroliny</td>
+                <td>17</td>
+                <td>Feminino</td>
+                <td>Geógrafa</td>
+                <td><input type="button" value="VALOR" id = "geografa""></td>
+        </tr>
+        <tr>
+                <td>Caíne</td>
+                <td>17</td>
+                <td>Feminino</td>
+                <td>Psicóloga</td>
+                <td><input type="button" value="VALOR" id = "psicologa"></td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="4">Total:4</td>
+        </tr>
+    </tfoot>
+   </table>
+   <script>
+       var prog = window.document.getElementById('programador');
+       prog.addEventListener('click',programador);
+       prog.addEventListener('mouseenter',progentrou);
+       function programador(){
+        var nome1 = 'Gustavo';
+        var nome2 = 'Haron';
+        var salario = 3900.5;
+        window.alert(`O salário do ${nome1} e do ${nome2} é ${salario.toLocaleString('pt-br',{style:'currency',currency:'BRL'})}`);
+
+       }
+       function progentrou(){
+        prog.style.background = 'green';
+        prog.style.color = 'black';
+       }
+
+
+       var geo = window.document.getElementById('geografa');
+       geo.addEventListener('click',geografia);
+       geo.addEventListener('mouseenter',geoentrou);
+       function geografia(){
+        var nome = 'Caroliny';
+        var salario = 2100.5;
+        window.alert(`O salário da ${nome} é ${salario.toLocaleString('pt-br',{style:'currency',currency:'BRL'})}`);
+       }
+       function geoentrou(){
+        geo.style.background = 'green';
+        geo.style.color = 'black';
+       }
+
+
+       var psico = window.document.getElementById('psicologa');
+       psico.addEventListener('click',psicologia);
+       psico.addEventListener('mouseenter',psicoentrou);
+       function psicologia(){ 
+        var nome = 'Caíne';
+        var salario = 3100.5;
+        window.alert(`O salário da ${nome} é ${salario.toLocaleString('pt-br',{style:'currency',currency:'BRL'})}`);
+       }
+       function psicoentrou(){
+        psico.style.background = 'green';
+        psico.style.color = 'black';
+       }
+   </script>
+</body>
+</html>

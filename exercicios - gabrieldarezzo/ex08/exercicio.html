@@ -1,0 +1,25 @@
+<!--Crie um campo texto parar preencher um CPF <input maxlength="11" id="cpf" />, e exiba ao lado com pontuação conforme preenche-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercicio</title>
+</head>
+<body>
+   <center><h1>CPF</h1></center>
+   <input type="number" maxlength="11" id="cpf"><input type="button" value="Enviar" id="envio">
+   <div id="res">Nulo</div>
+   <script>
+       var envio = document.getElementById('envio')
+       envio.addEventListener('click',enviar)
+       function enviar(){
+        var cpfn = document.getElementById('cpf')
+        var cpf = Number(cpfn.value)
+        var resultado = document.getElementById('res')
+        resultado.innerText = `${cpf}`
+       }
+   </script>
+</body>
+</html>

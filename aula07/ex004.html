@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Teste</title>
+    <style> /*ESTILO CSS*/
+        body{
+            font: normal 20pt Arial;
+        }
+        
+        h1 {
+            text-align:center;
+        }
+        h2 {
+            text-align: center;
+        }
+        button{
+            background-color: black;
+            color:greenyellow;
+            
+        }
+    </style>
+</head>
+<body><!--CORPO HTML-->
+    <h1>JavaScript</h1>
+    <h2>Rumo ao domínio da trinca front-end!</h2>
+    <ol type="1">
+        <li>Vídeos Curso em Vídeo</li>
+        <li>Exercícios</li>
+        <li>Interação com a comunidade</li>
+    </ol>
+    <button>VALOR</button>
+    <script>//JavaScript
+        var button = document.querySelector('button');
+        button.onclick = function(){
+            var valor = 2550.4;
+            var nome = window.prompt('Qual é o seu nome?');
+            var idade = window.prompt(`${nome} digite sua idade: `);
+            if(idade >= 16 && idade <=20){
+                window.alert(`${nome} o valor do curso é ${valor.toLocaleString('pt-BR', {style: 'currency', currency:'BRL'})}`);
+            } else {
+                window.alert(`${nome} você não tem permissão!`);
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Nacionalidade</title>
+</head>
+<body>
+    <h1>Cadastro de identidade</h1>
+    Nome: <input type="text" id="txtnome">
+    Nacionalidade: <input type="text" id="txtnac">
+    <input type="button" value="verificar" onclick="verifica()">
+    <div id="res"></div>
+    <script>
+        function verifica(){
+            var res = document.getElementById('res')
+            var nome = window.document.querySelector('input#txtnome')
+            var nacion = window.document.getElementById('txtnac')
+            var nacionalidade = nacion.value;
+            var Nome = nome.value;
+            if(nacionalidade == 'brasileiro'){
+                res.innerHTML += `${Nome} você é nativo do Brasil!`
+            } else{
+                res.innerHTML = `${Nome} você é estrangeiro!`
+            }
+        }
+    </script>
+</body>
+</html>
